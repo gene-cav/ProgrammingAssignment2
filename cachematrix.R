@@ -24,6 +24,7 @@ makeCacheMatrix <- function(x = matrix()) {
       }
       get <- function() x
       setinverse <- function(inverted) inv <<- inverted
+            # problem: setinverse could get called outside cacheSolve.
       getinverse <- function() inv
       list(set = set, get = get,
             setinverse = setinverse,
